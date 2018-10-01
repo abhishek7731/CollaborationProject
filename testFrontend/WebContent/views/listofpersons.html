@@ -1,0 +1,38 @@
+<div class="container" ng-controller="PersonCtrl">
+<b>List Of Person Details</b>
+<br>
+<span style="color:red">{{error. errorMsg}}</span>
+<div class="container">
+<table class="table table-striped" border="1">
+	<thead>
+
+		<tr>
+
+			<th>Id</th>
+			<th>Firstname</th>
+			<th>Lastname</th>
+			<th>Action</th>
+
+		</tr>
+
+	</thead>
+	<tbody>
+	
+	<tr ng-repeat="p in persons">
+	<td>{{p.id}}</td>
+	<td><a href="">{{p.firstaname}}</a></td>
+	<td>{{p.lastname}}</td>
+	<td>
+	<a href="#/getperson/{{p.id}}"><span class="glyphicon glyphicon-info-sign"></span></a>
+<button ng-click="deletePerson(p.id)"><span class="glyphicon glyphicon-trash"></span></button>
+	    <a href="#/getupdateform/{{p.id}}"><span class="glyphicon glyphicon-pencil"></span></a>
+	
+	</td>
+
+	</tr>
+
+</tbody>
+
+</table>
+</div>
+</div>

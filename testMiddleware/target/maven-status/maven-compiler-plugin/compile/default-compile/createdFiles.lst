@@ -1,0 +1,10 @@
+com\niit\restcontroller\BlogCommentController.class
+com\niit\restcontroller\NotificationController.class
+com\niit\controller\HomeController.class
+com\niit\restcontroller\ProfilePictureController.class
+com\niit\restcontroller\UserController.class
+com\niit\config\WebConfig.class
+com\niit\restcontroller\JobController.class
+com\niit\config\WebIntilizer.class
+com\niit\restcontroller\BlogController.class
+com\niit\restcontroller\FriendController.class

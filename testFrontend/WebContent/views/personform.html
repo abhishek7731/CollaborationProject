@@ -1,0 +1,42 @@
+<form ng-controller="PersonCtrl">
+<span style="color:red" >{{error.errorMsg}}</span>
+Enter firstname : <input type="text" ng-model="person.firstaname"><br>
+Enter lastname : <input type="text" ng-model="person.lastname"><br>
+Enter email : <input type="email" ng-model="person.email"><br>
+Enter phonenumber : <input type="phonenumber" ng-model="person.phonenumber"><br>
+<button ng-click="savePerson(person)">Add Persons</button>
+</form>
+ 
+ 
+ <div class="container">
+<table class="table table-striped" border="1">
+	<thead>
+
+		<tr>
+
+			<th>Id</th>
+			<th>Firstname</th>
+			<th>Lastname</th>
+
+		</tr>
+
+	</thead>
+	<tbody>
+	
+	<tr ng-repeat="p in persons">
+	<td>{{p.id}}</td>
+	<td>{{p.firstaname}}</td>
+	<td>{{p.lastname}}</td>
+	<td>
+	<a><span class="glyphicon glyphicon-info-sign"></span></a>
+	    <a><span class="glyphicon glyphicon-info-trash"></span></a>
+	    <a><span class="glyphicon glyphicon-pencil"></span></a>
+	
+	</td>
+
+	</tr>
+
+</tbody>
+
+</table>
+</div>

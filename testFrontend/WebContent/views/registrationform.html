@@ -1,0 +1,12 @@
+<span style="color:red" >{{error.errorMsg}}</span>
+<form ng-controller="UserCtrl">
+
+Enter firstname : <input type="text" ng-model="user.firstname"><br>
+Enter lastname : <input type="text" ng-model="user.lastname"><br>
+Enter email : <input type="email" ng-model="user.email"><br>
+Enter phonenumber : <input type="phonenumber" ng-model="user.phonenumber"><br>
+Enter role : <input type="text" ng-model="user.role"><br>
+Enter password :<input type="password" ng-model="user.password"><br>
+
+<button ng-click="registration(user)">Register Here</button>
+</form>

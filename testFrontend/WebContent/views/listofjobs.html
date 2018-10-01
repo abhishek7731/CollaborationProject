@@ -1,0 +1,28 @@
+<b>List Of Jobs</b>
+<div class="container">
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<b>Job Details</b>
+			<div class="panel-body"></div>
+			<ul style="list-style: none"></ul>
+
+			<li ng-repeat="job in jobs">
+			<a ng-click="showJobDetails(job.id)">{{job.id}}&nbsp;{{job.jobtitle}}</a><br>
+			<b>Posted On:</b>{{job.postedOn | date:'yyyy:MM-dd'}}
+
+				<div ng-show="showJob && id==job.id"> <!-- intial value of showJob is false soo we will not get the content only we will get title and date but as soon as we click it wii becom true -->
+                    <b>Job Description</b>{{job.jobdescription}}<br>
+					<b>Salary:</b>{{job.salary}}<br>
+					<b>Location:</b>{{job.location}}<br>
+					<b>Skils Required</b>{{job.skillrequired}}<br>
+					<b>Company Name</b>{{job.companyname}}
+					
+				</div>
+				<hr></li>
+
+		</div>
+
+
+	</div>
+
+</div>

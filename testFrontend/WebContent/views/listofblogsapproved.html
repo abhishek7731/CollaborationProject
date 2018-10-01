@@ -1,0 +1,24 @@
+
+<div class="panel panel-info">
+	<div class="panel panel-heading">
+		Blogs
+		<div class="panel-body">
+		<div ng-if="blogsApproved.length==0">No Blogs</div>
+			<ul style="list-style: none;">
+				<li ng-repeat="blog in getBlogsApproved">
+				<a href="#/getblog/{{blog.id}}"><b>Blog Title</b>
+					{{blog.blogName}}</a><br> 
+					<b>Posted On</b> {{blog.postedOn | date:'dd:MM:yyyy'}}<br>
+					<b>Posted By</b>
+					{{blog.postedBy.firstname}} &nbsp;  {{blog.postedBy.lastname}}
+                     <hr>
+                     </li>
+
+			</ul>
+
+		</div>
+	</div>
+
+</div>
+
+

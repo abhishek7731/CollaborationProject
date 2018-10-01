@@ -1,0 +1,34 @@
+<div class="panel panel-info">
+<div class="panel-heading">
+Pending Requests
+<div class="panel-body">
+<ul style="list-style:none;">
+
+<li ng-repeat="pendingRequest in pendingRequests">
+
+{{pendingRequest.fromId.email}}<br>
+{{pendingRequest.fromId.firstname}} &nbsp; {{pendingRequest.fromId.lastname}}<br>
+{{pendingRequest.fromId.role}}<br>
+{{pendingRequest.fromId.phonenumber}}<br>
+
+<button class="btn btn-info" ng-click="acceptRequest(pendingRequest)">Accept</button>
+<button class="btn btn-danger" ng-click="deleteRequest(pendingRequest)">Delete</button>
+
+
+</li>
+
+</ul>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+</div>

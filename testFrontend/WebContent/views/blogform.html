@@ -1,0 +1,21 @@
+<h1>Add Blog Post</h1>
+<form ng-controller="BlogCtrl">
+
+	<table>
+		<tr>
+
+			<td>Enter Blog Title</td>
+			<td><input type="text" ng-model="blog.blogName"></td>
+		</tr>
+
+		<tr>
+
+			<td>Enter Blog Content</td>
+			<td><textarea ng-model="blog.blogcontent"></textarea></td>
+		</tr>
+         
+         
+         <button ng-click="addBlog(blog)">Add Blog</button>
+	</table>
+
+</form>
