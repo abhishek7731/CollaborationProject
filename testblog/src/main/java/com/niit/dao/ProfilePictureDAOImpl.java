@@ -24,7 +24,7 @@ public class ProfilePictureDAOImpl implements ProfilePictureDAO
 	}
 
 	@Override
-	public ProfilePicture getProfilePicture(String email) 
+	public ProfilePicture getProfilePicture(String email) //we are passing email id and getting image
 	{
 		Session session=sessionFactory.getCurrentSession();
        ProfilePicture profilePicture=(ProfilePicture)session.get(ProfilePicture.class, email);

@@ -12,7 +12,7 @@ public class ProfilePicture
 	@Id
 private String email;
 	@Lob
-private byte[] image;
+private byte[] image; //type of image is byte[]
 public String getEmail() {
 	return email;
 }

@@ -3,6 +3,8 @@
 		<b>Blog Title</b> {{blogPost.blogName}}<br> <b>Posted On: </b>
 		{{blogPost.postedOn | date:'dd-MM-yyyy'}}<br> <b>Posted By:</b>
 		{{blogPost.postedBy.firstname}} &nbsp; {{blogPost.postedBy.lastname}}
+<img src="http://localhost:8081/testMiddleware/getimage?email={{blogPost.postedBy.email}}" alt="No Image"  height="50px" width="50px">
+		
 	</div>
 	<div class="panel-body"> 
 		<p ng-bind-html="content">

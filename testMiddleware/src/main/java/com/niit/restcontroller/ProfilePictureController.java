@@ -42,7 +42,24 @@ public ResponseEntity<?> uploadProfilePicture(@RequestParam CommonsMultipartFile
 	
 }
 
-
+@RequestMapping(value="/getimage" ,method=RequestMethod.GET)
+public @ResponseBody byte[] getProfilePicture(@RequestParam String email,HttpSession session)
+{
+	String authEmail = (String)session.getAttribute("loggedInUser");
+	if(authEmail==null)
+	{
+		return null;
+	}
+    ProfilePicture profilePicture=profilePictureDAO.getProfilePicture(email);
+    if(profilePicture==null)
+    {
+    	return null;
+    }
+    else
+    {
+    	return profilePicture.getImage();
+    }
+}
 }
 
 
