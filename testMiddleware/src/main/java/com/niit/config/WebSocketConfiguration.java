@@ -7,32 +7,23 @@ import org.springframework.web.socket.config.annotation.AbstractWebSocketMessage
 import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 
-
-
 @Configuration
 @EnableWebSocketMessageBroker  // enable broker based stomp messaging
 @ComponentScan(basePackages="com.niit")
 public class WebSocketConfiguration extends AbstractWebSocketMessageBrokerConfigurer
 {
 
-	
-
 	@Override
-	public void configureMessageBroker(MessageBrokerRegistry configurer) {
-		System.out.println("CONFIGURE MESSAGE BROKER REGISTRY");
-		configurer.enableSimpleBroker("/topic/", "/queue/"); //here topic is the username
-		configurer.setApplicationDestinationPrefixes("/app");
-		
+	public void configureMessageBroker(MessageBrokerRegistry config)
+	{
+		config.enableSimpleBroker("/topic");
+		config.setApplicationDestinationPrefixes("/app");
 	}
-
 	
-
 	@Override
-	public void registerStompEndpoints(StompEndpointRegistry registry) {
-		System.out.println("REGISTER STOMP ENDPOINTS...");
-		registry.addEndpoint("/chatmodule").withSockJS();
-		
+	public void registerStompEndpoints(StompEndpointRegistry registry) 
+	{
+		registry.addEndpoint("/chat").withSockJS();
 	}
-
 
 }

@@ -1,4 +1,4 @@
-app.controller('FriendCtrl', function($scope, $location, FriendService) {
+ app.controller('FriendCtrl', function($scope, $location,$rootScope, FriendService) {
 
 	
 	function getSuggestedUsers(){
@@ -84,6 +84,13 @@ $scope.friendDetails=response.data //it is of type user coz we are selecting fro
 		$location.path('/login')
 })
 
+$scope.startChat=function(){
+	$location.path('/chat')
+
+	$rootScope.email=email;
+	
+	
+}
 
 
 	getSuggestedUsers()

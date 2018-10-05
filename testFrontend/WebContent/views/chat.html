@@ -1,83 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Chat</title>
-    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="resources/css/portfolio.css" rel="stylesheet">
-  </head>
-  <body>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	color: #222;
+	font-family: COTILLIO, sans-serif;
+	font-weight: 300;
+	background:url('assets/images/profile.jpg');
+}
+#chat-box {
+	margin-top:-134px;
+	margin-right:350px;
+	position: relative;
+	
+	width: 600px;
+	height: 520px;
+	border-radius: 2px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+	overflow:auto;
+	float:right;
+	bottom:0px;
+	background: rgba(255,255,255,0.5);
+}
+#btn{width:180px; background:rgba(134,41,173,0.8); border:none; box-shadow: 1px 3px 8px #000;text-shadow: 1px 3px 3px #000;font-size: 18px; margin-top:5px;}
+	#btn:hover{width:180px; background:rgba(134,41,173,0.8); border:none; box-shadow: 1px 3px 8px #000;}
+</style>
+</head>
+<body>
+<h1 style="float:left;padding-left: 50px;padding-top: 100px;font-size: 90px;color: aliceblue;text-shadow: 1px 1px 23px #333;">Lets make some<br> Talk ...</h1>
+	<div id="chat-box" ng-controller="ChatController">
+		<form ng-submit="addMessage()" name="chatMsg">
+			<div class="col-sm-12">
+				<div class="row" style="background: teal; color:#fff;">
+					<div class="col-sm-9 form-group">
+						<label align="center">Message <input type="text"
+							class="form-control" placeholder="Enter message here" style="width:550px;"
+							ng-model="message"></label> 
+						<button id="btn" class="btn btn-primary"
+							ng-disabled="message.length>250||message.length==0">Send</button><span style="float:right; margin-top:5px;">Maximum <span classs="count"
+							ng-bind="max - message.length"> 250 </span></span>
 
-    <header class="container">
-      <div id="heading" class="masthead">
-        
-        <h2>Chat <small>Online Chat Room</small></h2>
-       
-      </div>
-   </header>
-   
-   <section class="main container">
-     <div class="row">
-    	<div class="col-md-12">
-	   		<p class="lead">Type in the box below to start a chat!</p>
-	   		
-	   	</div> 
-     
-     </div>
-   	
-   	
-   	<div class="row">
-   		<div class="col-md-12">
-   		
-   			<form role="form" id="chatForm" ng-submit="sendMessage(chat)">
-          <div class="alert alert-info notification" id="joinedChat" ng-if="latestUser" ng-animate="{enter: 'fade', leave: 'fade'}">
-<!-- when a new user joins the chat room, other user will get this message for few seconds -->
-            {{latestUser}} has joined the chat!
-          </div>
-  			  <div class="form-group">
-  			    <label for="to">Send To</label>
-  			    <select class="form-control" id="to" name="to" ng-model="chat.to">
-  			    	<option value="">Select Recipient</option>
-              <option value="all">All Users</option>
-  			    	<option ng-repeat="user in users" value="{{user}}">{{capitalize(user)}}</option>
-  			    </select>
-  			  </div>
-  			  <div class="form-group">
-  			    <label for="message">Message</label>
-  			    <textarea class="form-control focus-on-click" name="message" placeholder="Message..." rows="3" ng-model="chat.message"></textarea>
-  			  </div>
-  			  <input type="submit" ng-focus="focus-on-click" name="send" class="btn btn-primary" value="Send.." />
-   			</form>
-   		
-   		</div>
-   	
-   	</div>
-   	
-   	<div class="row">
-   		<div class="col-md-12" id="chats" >
-   			<div ng-repeat="chat in chats | reverse" class="chat {{chat.direction}}" ng-class="{'broadcast': chat.broadcast}">
-          		<span class="from">
-		        	{{chat.from}}
-		       		<small ng-if="chat.broadcast">BROADCAST</small>
-		        </span>
-		        <span class="message">{{chat.message}}</span>
-		    </div>
-   		</div>
-   		
-   	
-   	</div>
-   	
- 
-   
-   </section>
-   
-    </body>
+					</div>
+				</div>
+			</div>
+		</form>
+
+
+		<div class="jumbotron" style="background:rgba(255,255,255,0.0);">
+			<p ng-repeat="msg in messages" color="lightblue">
+				<span> <img	src=""
+					width="20" height="20" onerror=this.src= ""/> <font style="text-shadow: 1px 1px 1px #000; color:slategrey;"
+					 face="Verdana"> {{msg.message}} </font>
+				</span>
+			</p>
+		</div>
+	</div>
+</body>
 </html>
-
-
-
-
-
-
-

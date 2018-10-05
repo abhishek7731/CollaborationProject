@@ -1,7 +1,7 @@
 <div class="panel panel-info">
 <div class="panel-heading">
 
-Friends
+<h1>Friends</h1>
 </div>
 <div class="panel-body">
 <ul style="list-style:none;">
@@ -10,6 +10,7 @@ Friends
 {{friend.firstname}} &nbsp; {{friend.lastname}}<br>
 {{friend.phonenumber}}<br>
 {{friend.role}}
+<button ng-click="startChat(friend.email)">Message</button>
 <img src="http://localhost:8081/testMiddleware/getimage?email={{friend.email}}" alt="No Image"  height="50px" width="50px">
 
 <hr>
