@@ -19,7 +19,7 @@ app.factory('chatService', function($q , $timeout)
 
 	service.receive=function()
 	{
-		return listener.promise;
+		return listener.promise; //jab bhi koi event fire hota hai tab listner activate hota
 	};
 
 	var reconnect=function()

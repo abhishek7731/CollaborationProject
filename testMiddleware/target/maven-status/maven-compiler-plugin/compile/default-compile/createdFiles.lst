@@ -1,5 +1,7 @@
+com\niit\config\WebSocketConfiguration.class
 com\niit\restcontroller\BlogCommentController.class
 com\niit\restcontroller\NotificationController.class
+com\niit\restcontroller\SockController.class
 com\niit\controller\HomeController.class
 com\niit\restcontroller\ProfilePictureController.class
 com\niit\restcontroller\UserController.class

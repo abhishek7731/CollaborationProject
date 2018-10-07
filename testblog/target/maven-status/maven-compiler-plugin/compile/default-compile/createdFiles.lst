@@ -18,8 +18,10 @@ com\niit\model\Notification.class
 com\niit\model\User.class
 com\niit\dao\NotificationDAOImpl.class
 com\niit\dao\PersonDAOImpl.class
+com\niit\model\OutputMessage.class
 com\niit\dao\BlogCommentDAO.class
 com\niit\model\Person.class
+com\niit\model\Message.class
 com\niit\model\Blog.class
 com\niit\model\Job.class
 com\niit\dao\JobDAOImpl.class

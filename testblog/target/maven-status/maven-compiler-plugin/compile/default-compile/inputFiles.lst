@@ -1,4 +1,5 @@
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\dao\ForumDAO.java
+C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\model\Message.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\dao\JobDAO.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\dao\ProfilePictureDAO.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\config\DBConfig.java
@@ -10,12 +11,10 @@ C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\dao\JobDAOImpl.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\dao\FriendDAO.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\dao\UserDAO.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\dao\ForumDAOImpl.java
-C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\model\Chat.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\model\ProfilePicture.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\dao\BlogCommentDAOImpl.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\dao\BlogDAO.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\model\ErrorClazz.java
-C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\config\WebSocketConfiguration.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\model\Person.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\model\Friend.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\dao\PersonDAO.java
@@ -26,6 +25,7 @@ C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\model\Forum.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\dao\BlogCommentDAO.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\dao\FriendDAOImpl.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\dao\ProfilePictureDAOImpl.java
+C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\model\OutputMessage.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\dao\UserDAOImpl.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\model\Notification.java
 C:\Users\ASUS\workspace\testblog\src\main\java\com\niit\model\Blog.java
